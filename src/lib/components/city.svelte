@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { CityResponse } from "../types/city";
+    import img from "$lib/assets/city.png"
     import Events from "./events.svelte";
     import { page } from '$app/stores'
     import { goto, invalidateAll } from '$app/navigation';
@@ -21,7 +22,7 @@
             <div class="avatar">
                 <div class="w-24 rounded-full">
                     <img
-                        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp5987035.png&f=1&nofb=1&ipt=a78da52e5a3ee7beb2f8ffbc24cf94c58b3c0838806c6173d6166d9f3f1f0d8c&ipo=images"
+                        src={img}
                         alt="{res.city} profile photo"
                     />
                 </div>

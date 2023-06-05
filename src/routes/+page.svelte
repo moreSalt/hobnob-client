@@ -70,7 +70,7 @@
     <div class="mt-4 w-3/5 flex flex-col gap-4">
         {#each cities as item}
             <a
-                href="/c/{item.code}"
+                href="/c/{item.code}?source={item.source}"
                 class="
                 card
                 card-compact
