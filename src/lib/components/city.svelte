@@ -34,7 +34,7 @@
         </div>
 
 
-        {#if res.events.length == 0 || (res.events.length > 0 && res.events[0].source != 'ra')}
+        {#if (res.events.length > 0 && res.events[0].source != 'ra')}
         <div class="flex flex-row justify-between">
             <label class="label cursor-pointer flex gap-2 self-start">
                 <span class="label-text">Show Popular</span>
