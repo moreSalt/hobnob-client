@@ -82,7 +82,7 @@
         >
             <div class="card-body flex flex-row justify-between">
                 <div class="flex flex-col content-between gap-4 whitespace-nowrap text-ellipsis overflow-hidden">
-                    <h3 class="font-bold text-white whitespace-nowrap text-ellipsis overflow-hidden {item.source == "ra" ? "text-error" : ""}" >
+                    <h3 class="font-bold text-white whitespace-nowrap text-ellipsis overflow-hidden" class:text-[#ff4848]={item.source === "ra"}>
                         {item.name}
                     </h3>
                     

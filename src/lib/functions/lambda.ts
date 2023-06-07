@@ -37,18 +37,21 @@ export async function Lambda(
             options
         );
 
+
         if (res.status != 200) {
             console.log(res.status, await res.json())
             return null;
         }
         if (method == "artist") {
             const body: ArtistResponse = await res.json();
+
             return body;
         } else if (method == "artists") {
             const body: ArtistsResponse = await res.json();
             return body;
         } else if (method == "city") {
             const body: CityResponse = await res.json();
+
             return body;
         } else if (method == "cities") {
             const body: CitiesResponse[] = await res.json();

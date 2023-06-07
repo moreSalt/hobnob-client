@@ -27,7 +27,7 @@
 
                         <div class="w-full">
                             <h3
-                                class="font-bold text-white whitespace-nowrap text-ellipsis overflow-hidden {item.source == "ra" ? "text-error" : ""}"
+                                class="font-bold text-white whitespace-nowrap text-ellipsis overflow-hidden"
                             >
                                 {item.name}
                             </h3>
