@@ -17,7 +17,7 @@ export async function Lambda(
             method: method,
             query: q,
             page: page || 0,
-            source: source
+            source: source || "default"
         };
         const options = {
             method: "POST",
@@ -51,7 +51,6 @@ export async function Lambda(
             return body;
         } else if (method == "city") {
             const body: CityResponse = await res.json();
-
             return body;
         } else if (method == "cities") {
             const body: CitiesResponse[] = await res.json();

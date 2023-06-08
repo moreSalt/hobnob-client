@@ -5,6 +5,7 @@
     import { page } from '$app/stores'
     import { goto, invalidateAll } from '$app/navigation';
     $: p = $page.url.searchParams.get('page') || "0"
+    $: s = $page.url.searchParams.get('source') || "default"
     export let res: CityResponse;
     $: popular = p == "0"
 
@@ -12,6 +13,7 @@
         p = `${change == 0 ? 0 : parseInt(p) + change}`
         let query = new URLSearchParams()
         query.set('page', p);
+        query.set('source', s);
         goto(`?${query.toString()}`)    
     }
 </script>
@@ -34,7 +36,7 @@
         </div>
 
 
-        {#if (res.events.length > 0 && res.events[0].source != 'ra')}
+        <!-- {#if (res.events.length > 0 && res.events[0].source != 'ra')} -->
         <div class="flex flex-row justify-between">
             <label class="label cursor-pointer flex gap-2 self-start">
                 <span class="label-text">Show Popular</span>
@@ -42,6 +44,7 @@
                     p =  popular ? "1" : "0"
                     let query = new URLSearchParams()
                     query.set('page', p);
+                    query.set('source', s);
                     goto(`?${query.toString()}`)        
                 }}/>
             </label>
@@ -54,13 +57,14 @@
                     p = `${parseInt(p) + 1}`
                     let query = new URLSearchParams()
                     query.set('page', p);
+                    query.set('source', s)
                     goto(`?${query.toString()}`);
 
                 }}>»</button>
               </div>
             {/if}
         </div>
-        {/if}
+        <!-- {/if} -->
     </div>
 
     <Events res={res.events} />

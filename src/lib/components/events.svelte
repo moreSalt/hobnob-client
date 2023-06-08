@@ -61,11 +61,17 @@
 </script>
 
 <!-- EVENTS -->
-<div class="flex flex-col gap-4 w-full lg:w-3/5">
+<div class="flex flex-col gap-2 w-full lg:w-3/5">
     {#each res as item, i}
-        {#if i != 0 && parseDate(res[i-1].date).day != parseDate(item.date).day && !$page.url.pathname.includes("/a/")}
-            <div class="divider"></div> 
+        {#if (i === 0 || parseDate(res[i-1].date).day != parseDate(item.date).day) && !$page.url.pathname.includes("/a/")}
+                <!-- <div class="divider">hello</div>  -->
+                <div class="flex w-full gap-4 items-center" class:mt-8={i !== 0}>
+                    <h3 class="text-xl font-bold text-white">{parseDate(item.date).month} {parseDate(item.date).day}</h3>
+                    <!-- <div class="flex-grow h-1 bg-base-300 rounded"></div> -->
+                  </div>
+
         {/if}
+        <div class="divider m-0"></div>
         <a class="
                 card
                 card-compact
@@ -82,7 +88,7 @@
         >
             <div class="card-body flex flex-row justify-between">
                 <div class="flex flex-col content-between gap-4 whitespace-nowrap text-ellipsis overflow-hidden">
-                    <h3 class="font-bold text-white whitespace-nowrap text-ellipsis overflow-hidden" class:text-[#ff4848]={item.source === "ra"}>
+                    <h3 class="font-bold text-white whitespace-nowrap text-ellipsis overflow-hidden" class:text-error={item.source === 'ra'}>
                         {item.name}
                     </h3>
                     
