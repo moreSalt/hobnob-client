@@ -21,8 +21,8 @@
 </script>
 
 {#if data}
-<div class="form-control w-full lg:w-3/5 self-center">
-    <label class="label cursor-pointer flex justify-start gap-2 items-center content-center">
+<div class="form-control w-full items-center">
+    <label class="label cursor-pointer flex justify-start gap-2 items-center content-center w-3/5">
       <span class="label-text">residential advisor</span> 
       <input type="checkbox" class="toggle toggle-error toggle-sm" {disabled} bind:checked={raSource} on:click={() => {
         disabled = true

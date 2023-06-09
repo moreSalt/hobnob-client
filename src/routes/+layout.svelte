@@ -7,9 +7,12 @@
 </script>
 
 <div class="pt-4 h-screen flex flex-col justify-between">
-  <div class="flex flex-col justify-between">
+  <div class="flex flex-col justify-between flex-grow">
     <Nav />
-    <slot />
+    <div class="flex-grow">
+        <slot />
+
+    </div>
   </div>
     <!-- FOOTER -->
     <footer class="footer footer-center p-4 bg-base-200 text-base-content mt-8">
