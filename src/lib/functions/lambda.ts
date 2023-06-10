@@ -19,6 +19,7 @@ export async function Lambda(
             page: page || 0,
             source: source || "default"
         };
+        
         const options = {
             method: "POST",
             headers: {
@@ -44,13 +45,13 @@ export async function Lambda(
         }
         if (method == "artist") {
             const body: ArtistResponse = await res.json();
-
             return body;
         } else if (method == "artists") {
             const body: ArtistsResponse = await res.json();
             return body;
         } else if (method == "city") {
             const body: CityResponse = await res.json();
+            // await console.log(body, page)
             return body;
         } else if (method == "cities") {
             const body: CitiesResponse[] = await res.json();

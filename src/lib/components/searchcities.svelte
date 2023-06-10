@@ -6,10 +6,10 @@
 
     <div class=" items-center justify-center flex flex-col">
         <!-- <p>Found {items.length} cities matching "{q}"</p> -->
-        <div class="mt-4 w-3/5 flex flex-col gap-4">
+        <div class="mt-4 w-3/5 max-w-7xl flex flex-col gap-4">
             {#each items as item}
                 <a
-                    href="/c/{item.code}?source={item.source}"
+                    href="/c/{item.code}?s={item.source}"
                     class="
                     card
                     card-compact
