@@ -7,12 +7,12 @@ import { Lambda } from "$lib/functions/lambda";
 export const load = async ({ url }) => {
     try {
 
-        const q = url.searchParams.get("query")
+        const q = url.searchParams.get("q")
         if (!q) {
             return
         } 
 
-        const source = url.searchParams.get("source")
+        const source = url.searchParams.get("s")
 
         const res = await Lambda("artists", q, 0, source || "default")
         if (res == null) {

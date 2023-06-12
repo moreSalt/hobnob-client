@@ -1,0 +1,2542 @@
+<!DOCTYPE html>
+<html data-theme="mytheme" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>hobnob</title>
+		<meta charset="utf-8">
+		<link rel="icon" href="http://localhost:5173/favicon.png">
+		<meta name="viewport" content="width=device-width">
+		
+	
+	<style type="text/css" data-vite-dev-id="/Users/tulip/Documents/projects/concerts/client/src/app.css">/*
+! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+
+:root,
+[data-theme] {
+  background-color: hsla(var(--b1) / var(--tw-bg-opacity, 1));
+  color: hsla(var(--bc) / var(--tw-text-opacity, 1));
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  color-scheme: dark;
+  --pf: 198.44 93.204% 47.686%;
+  --sf: 234.45 89.474% 59.137%;
+  --af: 328.85 85.621% 56%;
+  --bc: 0 0% 80%;
+  --pc: 198.44 100% 11.922%;
+  --sc: 234.45 100% 14.784%;
+  --ac: 328.85 100% 14%;
+  --nc: 0 2.5404% 83.02%;
+  --inc: 198.46 100% 9.6078%;
+  --suc: 172.46 100% 10.078%;
+  --wac: 40.61 100% 12.706%;
+  --erc: 350.94 100% 14.235%;
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-text-case: uppercase;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  --p: 198.44 93.204% 59.608%;
+  --s: 234.45 89.474% 73.922%;
+  --a: 328.85 85.621% 70%;
+  --b1: 0 0% 0%;
+  --b2: 0 0% 5.098%;
+  --b3: 0 1.9608% 10%;
+  --n: 0 1.2987% 15.098%;
+  --nf: 0 1.9608% 20%;
+  --in: 198.46 90.204% 48.039%;
+  --su: 172.46 66.008% 50.392%;
+  --wa: 40.61 88.172% 63.529%;
+  --er: 350.94 94.558% 71.176%;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    color-scheme: dark;
+    --pf: 262.35 80.315% 40.157%;
+    --sf: 315.75 70.196% 40%;
+    --af: 174.69 70.335% 32.784%;
+    --in: 198 93% 60%;
+    --su: 158 64% 52%;
+    --wa: 43 96% 56%;
+    --er: 0 91% 71%;
+    --inc: 198 100% 12%;
+    --suc: 158 100% 10%;
+    --wac: 43 100% 11%;
+    --erc: 0 100% 14%;
+    --rounded-box: 1rem;
+    --rounded-btn: 0.5rem;
+    --rounded-badge: 1.9rem;
+    --animation-btn: 0.25s;
+    --animation-input: .2s;
+    --btn-text-case: uppercase;
+    --btn-focus-scale: 0.95;
+    --border-btn: 1px;
+    --tab-border: 1px;
+    --tab-radius: 0.5rem;
+    --p: 262.35 80.315% 50.196%;
+    --pc: 0 0% 100%;
+    --s: 315.75 70.196% 50%;
+    --sc: 0 0% 100%;
+    --a: 174.69 70.335% 40.98%;
+    --ac: 0 0% 100%;
+    --n: 218.18 18.033% 11.961%;
+    --nf: 222.86 17.073% 8.0392%;
+    --nc: 220 13.376% 69.216%;
+    --b1: 220 17.647% 20%;
+    --b2: 220 17.241% 17.059%;
+    --b3: 218.57 17.949% 15.294%;
+    --bc: 220 13.376% 69.216%;
+  }
+}
+
+[data-theme=mytheme] {
+  color-scheme: dark;
+  --pf: 198.44 93.204% 47.686%;
+  --sf: 234.45 89.474% 59.137%;
+  --af: 328.85 85.621% 56%;
+  --bc: 0 0% 80%;
+  --pc: 198.44 100% 11.922%;
+  --sc: 234.45 100% 14.784%;
+  --ac: 328.85 100% 14%;
+  --nc: 0 2.5404% 83.02%;
+  --inc: 198.46 100% 9.6078%;
+  --suc: 172.46 100% 10.078%;
+  --wac: 40.61 100% 12.706%;
+  --erc: 350.94 100% 14.235%;
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-text-case: uppercase;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  --p: 198.44 93.204% 59.608%;
+  --s: 234.45 89.474% 73.922%;
+  --a: 328.85 85.621% 70%;
+  --b1: 0 0% 0%;
+  --b2: 0 0% 5.098%;
+  --b3: 0 1.9608% 10%;
+  --n: 0 1.2987% 15.098%;
+  --nf: 0 1.9608% 20%;
+  --in: 198.46 90.204% 48.039%;
+  --su: 172.46 66.008% 50.392%;
+  --wa: 40.61 88.172% 63.529%;
+  --er: 350.94 94.558% 71.176%;
+}
+
+[data-theme=light] {
+  color-scheme: light;
+  --pf: 258.89 94.378% 40.941%;
+  --sf: 314 100% 37.647%;
+  --af: 174 60% 40.784%;
+  --nf: 219 14.085% 22.275%;
+  --in: 198 93% 60%;
+  --su: 158 64% 52%;
+  --wa: 43 96% 56%;
+  --er: 0 91% 71%;
+  --inc: 198 100% 12%;
+  --suc: 158 100% 10%;
+  --wac: 43 100% 11%;
+  --erc: 0 100% 14%;
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-text-case: uppercase;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  --p: 258.89 94.378% 51.176%;
+  --pc: 0 0% 100%;
+  --s: 314 100% 47.059%;
+  --sc: 0 0% 100%;
+  --a: 174 60% 50.98%;
+  --ac: 174.71 43.59% 15.294%;
+  --n: 219 14.085% 27.843%;
+  --nc: 0 0% 100%;
+  --b1: 0 0% 100%;
+  --b2: 0 0% 94.902%;
+  --b3: 180 1.9608% 90%;
+  --bc: 215 27.907% 16.863%;
+}
+
+[data-theme=dark] {
+  color-scheme: dark;
+  --pf: 262.35 80.315% 40.157%;
+  --sf: 315.75 70.196% 40%;
+  --af: 174.69 70.335% 32.784%;
+  --in: 198 93% 60%;
+  --su: 158 64% 52%;
+  --wa: 43 96% 56%;
+  --er: 0 91% 71%;
+  --inc: 198 100% 12%;
+  --suc: 158 100% 10%;
+  --wac: 43 100% 11%;
+  --erc: 0 100% 14%;
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-text-case: uppercase;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  --p: 262.35 80.315% 50.196%;
+  --pc: 0 0% 100%;
+  --s: 315.75 70.196% 50%;
+  --sc: 0 0% 100%;
+  --a: 174.69 70.335% 40.98%;
+  --ac: 0 0% 100%;
+  --n: 218.18 18.033% 11.961%;
+  --nf: 222.86 17.073% 8.0392%;
+  --nc: 220 13.376% 69.216%;
+  --b1: 220 17.647% 20%;
+  --b2: 220 17.241% 17.059%;
+  --b3: 218.57 17.949% 15.294%;
+  --bc: 220 13.376% 69.216%;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+.avatar {
+  position: relative;
+  display: inline-flex;
+}
+.avatar > div {
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+.avatar img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.avatar.placeholder > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  display: inline-flex;
+  flex-shrink: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+  border-color: hsl(var(--n) / var(--tw-border-opacity));
+  text-align: center;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--rounded-btn, 0.5rem);
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 1em;
+  min-height: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-transform: var(--btn-text-case, uppercase);
+  text-decoration-line: none;
+  border-width: var(--border-btn, 1px);
+  animation: button-pop var(--animation-btn, 0.25s) ease-out;
+  --tw-border-opacity: 1;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--nc) / var(--tw-text-opacity));
+}
+.btn-disabled,
+  .btn[disabled] {
+  pointer-events: none;
+}
+.btn-square {
+  height: 3rem;
+  width: 3rem;
+  padding: 0px;
+}
+.btn-circle {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 9999px;
+  padding: 0px;
+}
+.btn.loading,
+    .btn.loading:hover {
+  pointer-events: none;
+}
+.btn.loading:before {
+  margin-right: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 9999px;
+  border-width: 2px;
+  animation: spin 2s linear infinite;
+  content: "";
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: currentColor;
+  border-right-color: currentColor;
+}
+@media (prefers-reduced-motion: reduce) {
+
+  .btn.loading:before {
+    animation: spin 10s linear infinite;
+  }
+}
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.btn-group {
+  display: inline-flex;
+}
+.btn-group > input[type="radio"].btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.btn-group > input[type="radio"].btn:before {
+  content: attr(data-title);
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--rounded-box, 1rem);
+}
+.card:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: var(--padding-card, 2rem);
+  gap: 0.5rem;
+}
+.card-body :where(p) {
+  flex-grow: 1;
+}
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.card figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card.image-full {
+  display: grid;
+}
+.card.image-full:before {
+  position: relative;
+  content: "";
+  z-index: 10;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+  opacity: 0.75;
+  border-radius: var(--rounded-box, 1rem);
+}
+.card.image-full:before,
+    .card.image-full > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.card.image-full > figure img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card.image-full > .card-body {
+  position: relative;
+  z-index: 20;
+  --tw-text-opacity: 1;
+  color: hsl(var(--nc) / var(--tw-text-opacity));
+}
+.checkbox {
+  flex-shrink: 0;
+  --chkbg: var(--bc);
+  --chkfg: var(--b1);
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-width: 1px;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  --tw-border-opacity: 0.2;
+  border-radius: var(--rounded-btn, 0.5rem);
+}
+.divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 1rem;
+  white-space: nowrap;
+}
+.divider:before,
+  .divider:after {
+  content: "";
+  flex-grow: 1;
+  height: 0.125rem;
+  width: 100%;
+}
+.footer {
+  display: grid;
+  width: 100%;
+  grid-auto-flow: row;
+  place-items: start;
+  row-gap: 2.5rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.footer > * {
+  display: grid;
+  place-items: start;
+  gap: 0.5rem;
+}
+.footer-center {
+  place-items: center;
+  text-align: center;
+}
+.footer-center > * {
+  place-items: center;
+}
+@media (min-width: 48rem) {
+
+  .footer {
+    grid-auto-flow: column;
+  }
+
+  .footer-center {
+    grid-auto-flow: row dense;
+  }
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.hero {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  background-size: cover;
+  background-position: center;
+}
+.hero > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.input {
+  flex-shrink: 1;
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  line-height: 2;
+  line-height: 1.5rem;
+  border-width: 1px;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  --tw-border-opacity: 0;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+  border-radius: var(--rounded-btn, 0.5rem);
+}
+.input-group {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+.input-group > .input {
+  isolation: isolate;
+}
+.input-group > *,
+  .input-group > .input,
+  .input-group > .textarea,
+  .input-group > .select {
+  border-radius: 0px;
+}
+.input-group :where(span) {
+  display: flex;
+  align-items: center;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.input-group > :first-child {
+  border-top-left-radius: var(--rounded-btn, 0.5rem);
+  border-top-right-radius: 0;
+  border-bottom-left-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-right-radius: 0;
+}
+.input-group > :last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: var(--rounded-btn, 0.5rem);
+}
+.link {
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+.menu > :where(li.disabled > *:not(ul):focus) {
+  cursor: auto;
+}
+.stack {
+  display: inline-grid;
+  place-items: center;
+  align-items: flex-end;
+}
+.stack > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  transform: translateY(10%) scale(0.9);
+  z-index: 1;
+  width: 100%;
+  opacity: 0.6;
+}
+.stack > *:nth-child(2) {
+  transform: translateY(5%) scale(0.95);
+  z-index: 2;
+  opacity: 0.8;
+}
+.stack > *:nth-child(1) {
+  transform: translateY(0) scale(1);
+  z-index: 3;
+  opacity: 1;
+}
+.swap {
+  position: relative;
+  display: inline-grid;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  place-content: center;
+  cursor: pointer;
+}
+.swap > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform, opacity;
+}
+.swap input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.swap .swap-on,
+.swap .swap-indeterminate,
+.swap input:indeterminate ~ .swap-on {
+  opacity: 0;
+}
+.swap input:checked ~ .swap-off,
+.swap.swap-active .swap-off,
+.swap input:indeterminate ~ .swap-off {
+  opacity: 0;
+}
+.swap input:checked ~ .swap-on,
+.swap-active .swap-on,
+.swap input:indeterminate ~ .swap-indeterminate {
+  opacity: 1;
+}
+.toggle {
+  flex-shrink: 0;
+  --tglbg: hsl(var(--b1));
+  --handleoffset: 1.5rem;
+  --handleoffsetcalculator: calc(var(--handleoffset) * -1);
+  --togglehandleborder: 0 0;
+  height: 1.5rem;
+  width: 3rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-width: 1px;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  --tw-border-opacity: 0.2;
+  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.5;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--rounded-badge, 1.9rem);
+  transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;
+  box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset, var(--togglehandleborder);
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  --tooltip-offset: calc(100% + 1px + var(--tooltip-tail, 0px));
+  text-align: center;
+  --tooltip-tail: 3px;
+  --tooltip-color: hsl(var(--n));
+  --tooltip-text-color: hsl(var(--nc));
+  --tooltip-tail-offset: calc(100% + 1px - var(--tooltip-tail));
+}
+.tooltip:before {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  content: var(--tw-content);
+  --tw-content: attr(data-tip);
+  max-width: 20rem;
+  border-radius: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  background-color: var(--tooltip-color);
+  color: var(--tooltip-text-color);
+  width: -moz-max-content;
+  width: max-content;
+}
+.tooltip:before, .tooltip-top:before {
+  transform: translateX(-50%);
+  top: auto;
+  left: 50%;
+  right: auto;
+  bottom: var(--tooltip-offset);
+}
+.avatar-group :where(.avatar) {
+  overflow: hidden;
+  border-radius: 9999px;
+  border-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b1) / var(--tw-border-opacity));
+}
+.btn-outline .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--nf, var(--n)) / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--nc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-primary .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-secondary .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--s) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--s) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--sc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-accent .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--a) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--a) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--ac) / var(--tw-text-opacity));
+}
+.btn-outline .badge.outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--nf, var(--n)) / var(--tw-border-opacity));
+  background-color: transparent;
+}
+.btn-outline.btn-primary .badge-outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: hsl(var(--p) / var(--tw-text-opacity));
+}
+.btn-outline.btn-secondary .badge-outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--s) / var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: hsl(var(--s) / var(--tw-text-opacity));
+}
+.btn-outline.btn-accent .badge-outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--a) / var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: hsl(var(--a) / var(--tw-text-opacity));
+}
+.btn-outline.btn-info .badge-outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--in) / var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: hsl(var(--in) / var(--tw-text-opacity));
+}
+.btn-outline.btn-success .badge-outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--su) / var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: hsl(var(--su) / var(--tw-text-opacity));
+}
+.btn-outline.btn-warning .badge-outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--wa) / var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: hsl(var(--wa) / var(--tw-text-opacity));
+}
+.btn-outline.btn-error .badge-outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--er) / var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: hsl(var(--er) / var(--tw-text-opacity));
+}
+.btn-outline:hover .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+}
+.btn-outline:hover .badge.outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--nc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-primary:hover .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--pc) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--pc) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--p) / var(--tw-text-opacity));
+}
+.btn-outline.btn-primary:hover .badge.outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--pc) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-secondary:hover .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--sc) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--sc) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--s) / var(--tw-text-opacity));
+}
+.btn-outline.btn-secondary:hover .badge.outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--sc) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--sf, var(--s)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--sc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-accent:hover .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--ac) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--ac) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--a) / var(--tw-text-opacity));
+}
+.btn-outline.btn-accent:hover .badge.outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--ac) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--af, var(--a)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--ac) / var(--tw-text-opacity));
+}
+.btm-nav>*.disabled,
+    .btm-nav>*.disabled:hover,
+    .btm-nav>*[disabled],
+    .btm-nav>*[disabled]:hover {
+  pointer-events: none;
+  --tw-border-opacity: 0;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+  --tw-text-opacity: 0.2;
+}
+.btm-nav>* .label {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.btn:active:hover,
+  .btn:active:focus {
+  animation: none;
+  transform: scale(var(--btn-focus-scale, 0.95));
+}
+.btn:hover,
+    .btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--nf, var(--n)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--nf, var(--n)) / var(--tw-bg-opacity));
+}
+.btn:focus-visible {
+  outline: 2px solid hsl(var(--nf));
+  outline-offset: 2px;
+}
+.btn-primary {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+.btn-primary:hover,
+    .btn-primary.btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
+}
+.btn-primary:focus-visible {
+  outline: 2px solid hsl(var(--p));
+}
+.btn-error {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--er) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--er) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--erc, var(--nc)) / var(--tw-text-opacity));
+}
+.btn-error:hover,
+    .btn-error.btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--er) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--er) / var(--tw-bg-opacity));
+}
+.btn-error:focus-visible {
+  outline: 2px solid hsl(var(--er));
+}
+.btn.glass:hover,
+    .btn.glass.btn-active {
+  --glass-opacity: 25%;
+  --glass-border-opacity: 15%;
+}
+.btn.glass:focus-visible {
+  outline: 2px solid currentColor;
+}
+.btn-ghost {
+  border-width: 1px;
+  border-color: transparent;
+  background-color: transparent;
+  color: currentColor;
+}
+.btn-ghost:hover,
+    .btn-ghost.btn-active {
+  --tw-border-opacity: 0;
+  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.2;
+}
+.btn-ghost:focus-visible {
+  outline: 2px solid currentColor;
+}
+.btn-outline {
+  border-color: currentColor;
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+}
+.btn-outline:hover,
+    .btn-outline.btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--b1) / var(--tw-text-opacity));
+}
+.btn-outline.btn-primary {
+  --tw-text-opacity: 1;
+  color: hsl(var(--p) / var(--tw-text-opacity));
+}
+.btn-outline.btn-primary:hover,
+      .btn-outline.btn-primary.btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-secondary {
+  --tw-text-opacity: 1;
+  color: hsl(var(--s) / var(--tw-text-opacity));
+}
+.btn-outline.btn-secondary:hover,
+      .btn-outline.btn-secondary.btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--sf, var(--s)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--sf, var(--s)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--sc) / var(--tw-text-opacity));
+}
+.btn-outline.btn-accent {
+  --tw-text-opacity: 1;
+  color: hsl(var(--a) / var(--tw-text-opacity));
+}
+.btn-outline.btn-accent:hover,
+      .btn-outline.btn-accent.btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--af, var(--a)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--af, var(--a)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--ac) / var(--tw-text-opacity));
+}
+.btn-outline.btn-success {
+  --tw-text-opacity: 1;
+  color: hsl(var(--su) / var(--tw-text-opacity));
+}
+.btn-outline.btn-success:hover,
+      .btn-outline.btn-success.btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--su) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--su) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--suc, var(--nc)) / var(--tw-text-opacity));
+}
+.btn-outline.btn-info {
+  --tw-text-opacity: 1;
+  color: hsl(var(--in) / var(--tw-text-opacity));
+}
+.btn-outline.btn-info:hover,
+      .btn-outline.btn-info.btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--in) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--in) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--inc, var(--nc)) / var(--tw-text-opacity));
+}
+.btn-outline.btn-warning {
+  --tw-text-opacity: 1;
+  color: hsl(var(--wa) / var(--tw-text-opacity));
+}
+.btn-outline.btn-warning:hover,
+      .btn-outline.btn-warning.btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--wa) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--wa) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--wac, var(--nc)) / var(--tw-text-opacity));
+}
+.btn-outline.btn-error {
+  --tw-text-opacity: 1;
+  color: hsl(var(--er) / var(--tw-text-opacity));
+}
+.btn-outline.btn-error:hover,
+      .btn-outline.btn-error.btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--er) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--er) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--erc, var(--nc)) / var(--tw-text-opacity));
+}
+.btn-disabled,
+  .btn-disabled:hover,
+  .btn[disabled],
+  .btn[disabled]:hover {
+  --tw-border-opacity: 0;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.2;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+  --tw-text-opacity: 0.2;
+}
+.btn.loading.btn-square:before,
+    .btn.loading.btn-circle:before {
+  margin-right: 0px;
+}
+.btn.loading.btn-xl:before,
+    .btn.loading.btn-lg:before {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.btn.loading.btn-sm:before,
+    .btn.loading.btn-xs:before {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+.btn-group > input[type="radio"]:checked.btn,
+  .btn-group > .btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+.btn-group > input[type="radio"]:checked.btn:focus-visible, .btn-group > .btn-active:focus-visible {
+  outline: 2px solid hsl(var(--p));
+}
+@keyframes button-pop {
+
+  0% {
+    transform: scale(var(--btn-focus-scale, 0.95));
+  }
+
+  40% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.card :where(figure:first-child) {
+  overflow: hidden;
+  border-start-start-radius: inherit;
+  border-start-end-radius: inherit;
+  border-end-start-radius: unset;
+  border-end-end-radius: unset;
+}
+.card :where(figure:last-child) {
+  overflow: hidden;
+  border-start-start-radius: unset;
+  border-start-end-radius: unset;
+  border-end-start-radius: inherit;
+  border-end-end-radius: inherit;
+}
+.card:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.card.bordered {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+}
+.card.compact .card-body {
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+.card.image-full :where(figure) {
+  overflow: hidden;
+  border-radius: inherit;
+}
+.checkbox:focus-visible {
+  outline: 2px solid hsl(var(--bc));
+  outline-offset: 2px;
+}
+.checkbox:checked,
+  .checkbox[checked="true"],
+  .checkbox[aria-checked="true"] {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  background-repeat: no-repeat;
+  animation: checkmark var(--animation-input, 0.2s) ease-in-out;
+  background-image: linear-gradient(-45deg, transparent 65%, hsl(var(--chkbg)) 65.99%), linear-gradient(45deg, transparent 75%, hsl(var(--chkbg)) 75.99%), linear-gradient(-45deg, hsl(var(--chkbg)) 40%, transparent 40.99%), linear-gradient(45deg, hsl(var(--chkbg)) 30%, hsl(var(--chkfg)) 30.99%, hsl(var(--chkfg)) 40%, transparent 40.99%), linear-gradient(-45deg, hsl(var(--chkfg)) 50%, hsl(var(--chkbg)) 50.99%);
+}
+.checkbox:indeterminate {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  background-repeat: no-repeat;
+  animation: checkmark var(--animation-input, 0.2s) ease-in-out;
+  background-image: linear-gradient(90deg, transparent 80%, hsl(var(--chkbg)) 80%), linear-gradient(-90deg, transparent 80%, hsl(var(--chkbg)) 80%), linear-gradient(0deg, hsl(var(--chkbg)) 43%, hsl(var(--chkfg)) 43%, hsl(var(--chkfg)) 57%, hsl(var(--chkbg)) 57%);
+}
+.checkbox:disabled {
+  cursor: not-allowed;
+  border-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  opacity: 0.2;
+}
+@keyframes checkmark {
+
+  0% {
+    background-position-y: 5px;
+  }
+
+  50% {
+    background-position-y: -2px;
+  }
+
+  100% {
+    background-position-y: 0;
+  }
+}
+[dir="rtl"] .checkbox:checked,
+    [dir="rtl"] .checkbox[checked="true"],
+    [dir="rtl"] .checkbox[aria-checked="true"] {
+  background-image: linear-gradient(45deg, transparent 65%, hsl(var(--chkbg)) 65.99%), linear-gradient(-45deg, transparent 75%, hsl(var(--chkbg)) 75.99%), linear-gradient(45deg, hsl(var(--chkbg)) 40%, transparent 40.99%), linear-gradient(-45deg, hsl(var(--chkbg)) 30%, hsl(var(--chkfg)) 30.99%, hsl(var(--chkfg)) 40%, transparent 40.99%), linear-gradient(45deg, hsl(var(--chkfg)) 50%, hsl(var(--chkbg)) 50.99%);
+}
+.divider:before {
+  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.1;
+}
+.divider:after {
+  background-color: hsl(var(--bc) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.1;
+}
+.divider:not(:empty) {
+  gap: 1rem;
+}
+.drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-primary {
+  outline: 2px solid hsl(var(--p));
+}
+.drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-error {
+  outline: 2px solid hsl(var(--er));
+}
+.drawer-toggle:focus-visible ~ .drawer-content .drawer-button.btn-ghost {
+  outline: 2px solid currentColor;
+}
+.label-text {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+}
+.label a:hover {
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+}
+.input[list]::-webkit-calendar-picker-indicator {
+  line-height: 1em;
+}
+.input-bordered {
+  --tw-border-opacity: 0.2;
+}
+.input:focus {
+  outline: 2px solid hsla(var(--bc) / 0.2);
+  outline-offset: 2px;
+}
+.input-disabled,
+  .input[disabled] {
+  cursor: not-allowed;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 0.2;
+}
+.input-disabled::-moz-placeholder, .input[disabled]::-moz-placeholder {
+  color: hsl(var(--bc) / var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.2;
+}
+.input-disabled::placeholder,
+  .input[disabled]::placeholder {
+  color: hsl(var(--bc) / var(--tw-placeholder-opacity));
+  --tw-placeholder-opacity: 0.2;
+}
+.link:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.menu li.disabled > * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+  --tw-text-opacity: 0.2;
+}
+.menu li.disabled > *:hover {
+  background-color: transparent;
+}
+.mockup-phone .display {
+  overflow: hidden;
+  border-radius: 40px;
+  margin-top: -25px;
+}
+@keyframes progress-loading {
+
+  50% {
+    left: 107%;
+  }
+}
+@keyframes radiomark {
+
+  0% {
+    box-shadow: 0 0 0 12px hsl(var(--b1)) inset, 0 0 0 12px hsl(var(--b1)) inset;
+  }
+
+  50% {
+    box-shadow: 0 0 0 3px hsl(var(--b1)) inset, 0 0 0 3px hsl(var(--b1)) inset;
+  }
+
+  100% {
+    box-shadow: 0 0 0 4px hsl(var(--b1)) inset, 0 0 0 4px hsl(var(--b1)) inset;
+  }
+}
+@keyframes rating-pop {
+
+  0% {
+    transform: translateY(-0.125em);
+  }
+
+  40% {
+    transform: translateY(-0.125em);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.swap-rotate .swap-on,
+.swap-rotate .swap-indeterminate,
+.swap-rotate input:indeterminate ~ .swap-on {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.swap-rotate input:checked ~ .swap-off,
+.swap-rotate.swap-active .swap-off,
+.swap-rotate input:indeterminate ~ .swap-off {
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.swap-rotate input:checked ~ .swap-on,
+.swap-rotate.swap-active .swap-on,
+.swap-rotate input:indeterminate ~ .swap-indeterminate {
+  --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.swap-flip .swap-on,
+.swap-flip .swap-indeterminate,
+.swap-flip input:indeterminate ~ .swap-on {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  opacity: 1;
+}
+.swap-flip input:checked ~ .swap-off,
+.swap-flip.swap-active .swap-off,
+.swap-flip input:indeterminate ~ .swap-off {
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  opacity: 1;
+}
+.swap-flip input:checked ~ .swap-on,
+.swap-flip.swap-active .swap-on,
+.swap-flip input:indeterminate ~ .swap-indeterminate {
+  transform: rotateY(0deg);
+}
+.table tr.hover:hover th,
+    .table tr.hover:hover td,
+    .table tr.hover:nth-child(even):hover th,
+    .table tr.hover:nth-child(even):hover td {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
+}
+@keyframes toast-pop {
+
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+[dir="rtl"] .toggle {
+  --handleoffsetcalculator: calc(var(--handleoffset) * 1);
+}
+.toggle:focus-visible {
+  outline: 2px solid hsl(var(--bc));
+  outline-offset: 2px;
+}
+.toggle:checked,
+  .toggle[checked="true"],
+  .toggle[aria-checked=true] {
+  --handleoffsetcalculator: var(--handleoffset);
+  --tw-border-opacity: 1;
+  --tw-bg-opacity: 1;
+}
+[dir="rtl"] .toggle:checked, [dir="rtl"] .toggle[checked="true"], [dir="rtl"] .toggle[aria-checked=true] {
+  --handleoffsetcalculator: calc(var(--handleoffset) * -1);
+}
+.toggle:indeterminate {
+  --tw-border-opacity: 1;
+  --tw-bg-opacity: 1;
+  box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;
+}
+[dir="rtl"] .toggle:indeterminate {
+  box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;
+}
+.toggle-error:focus-visible {
+  outline: 2px solid hsl(var(--er));
+}
+.toggle-error:checked,
+    .toggle-error[checked="true"],
+    .toggle-error[aria-checked=true] {
+  border-color: hsl(var(--er) / var(--tw-border-opacity));
+  --tw-border-opacity: 0.1;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--er) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--erc, var(--nc)) / var(--tw-text-opacity));
+}
+.toggle:disabled {
+  cursor: not-allowed;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  background-color: transparent;
+  opacity: 0.3;
+  --togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset;
+}
+.tooltip:before,
+.tooltip:after {
+  opacity: 0;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-delay: 100ms;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tooltip:after {
+  position: absolute;
+  content: "";
+  border-style: solid;
+  border-width: var(--tooltip-tail, 0);
+  width: 0;
+  height: 0;
+  display: block;
+}
+.tooltip.tooltip-open:before,
+.tooltip.tooltip-open:after,
+.tooltip:hover:before,
+.tooltip:hover:after {
+  opacity: 1;
+  transition-delay: 75ms;
+}
+.tooltip:not([data-tip]):hover:before,
+.tooltip:not([data-tip]):hover:after {
+  visibility: hidden;
+  opacity: 0;
+}
+.tooltip:after, .tooltip-top:after {
+  transform: translateX(-50%);
+  border-color: var(--tooltip-color) transparent transparent transparent;
+  top: auto;
+  left: 50%;
+  right: auto;
+  bottom: var(--tooltip-tail-offset);
+}
+.btn-sm {
+  height: 2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  min-height: 2rem;
+  font-size: 0.875rem;
+}
+.btn-wide {
+  width: 16rem;
+}
+.btn-square:where(.btn-xs) {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0px;
+}
+.btn-square:where(.btn-sm) {
+  height: 2rem;
+  width: 2rem;
+  padding: 0px;
+}
+.btn-square:where(.btn-md) {
+  height: 3rem;
+  width: 3rem;
+  padding: 0px;
+}
+.btn-square:where(.btn-lg) {
+  height: 4rem;
+  width: 4rem;
+  padding: 0px;
+}
+.btn-circle:where(.btn-xs) {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 9999px;
+  padding: 0px;
+}
+.btn-circle:where(.btn-sm) {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 9999px;
+  padding: 0px;
+}
+.btn-circle:where(.btn-md) {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 9999px;
+  padding: 0px;
+}
+.btn-circle:where(.btn-lg) {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 9999px;
+  padding: 0px;
+}
+.input-sm {
+  height: 2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 2rem;
+}
+.toggle-sm {
+  --handleoffset: 0.75rem;
+  height: 1.25rem;
+  width: 2rem;
+}
+.avatar.online:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  display: block;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--su) / var(--tw-bg-opacity));
+  width: 15%;
+  height: 15%;
+  top: 7%;
+  right: 7%;
+  box-shadow: 0 0 0 2px hsl(var(--b1));
+}
+.avatar.offline:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  display: block;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
+  width: 15%;
+  height: 15%;
+  top: 7%;
+  right: 7%;
+  box-shadow: 0 0 0 2px hsl(var(--b1));
+}
+.btn-group .btn:not(:first-child):not(:last-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group .btn:first-child:not(:last-child) {
+  margin-top: -0px;
+  margin-left: -1px;
+  border-top-left-radius: var(--rounded-btn, 0.5rem);
+  border-top-right-radius: 0;
+  border-bottom-left-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-right-radius: 0;
+}
+.btn-group .btn:last-child:not(:first-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: var(--rounded-btn, 0.5rem);
+}
+.btn-group-horizontal .btn:not(:first-child):not(:last-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group-horizontal .btn:first-child:not(:last-child) {
+  margin-top: -0px;
+  margin-left: -1px;
+  border-top-left-radius: var(--rounded-btn, 0.5rem);
+  border-top-right-radius: 0;
+  border-bottom-left-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-right-radius: 0;
+}
+.btn-group-horizontal .btn:last-child:not(:first-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: var(--rounded-btn, 0.5rem);
+}
+.btn-group-vertical .btn:first-child:not(:last-child) {
+  margin-top: -1px;
+  margin-left: -0px;
+  border-top-left-radius: var(--rounded-btn, 0.5rem);
+  border-top-right-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group-vertical .btn:last-child:not(:first-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: var(--rounded-btn, 0.5rem);
+  border-bottom-right-radius: var(--rounded-btn, 0.5rem);
+}
+.card-compact .card-body {
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.card-compact .card-title {
+  margin-bottom: 0.25rem;
+}
+.card-normal .card-body {
+  padding: var(--padding-card, 2rem);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.card-normal .card-title {
+  margin-bottom: 0.75rem;
+}
+.m-0 {
+  margin: 0px;
+}
+.m-4 {
+  margin: 1rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.mt-8 {
+  margin-top: 2rem;
+}
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.contents {
+  display: contents;
+}
+.hidden {
+  display: none;
+}
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+.h-1 {
+  height: 0.25rem;
+}
+.h-10 {
+  height: 2.5rem;
+}
+.h-4 {
+  height: 1rem;
+}
+.h-6 {
+  height: 1.5rem;
+}
+.h-72 {
+  height: 18rem;
+}
+.h-full {
+  height: 100%;
+}
+.h-screen {
+  height: 100vh;
+}
+.max-h-screen {
+  max-height: 100vh;
+}
+.w-10 {
+  width: 2.5rem;
+}
+.w-24 {
+  width: 6rem;
+}
+.w-3\/5 {
+  width: 60%;
+}
+.w-32 {
+  width: 8rem;
+}
+.w-4 {
+  width: 1rem;
+}
+.w-48 {
+  width: 12rem;
+}
+.w-6 {
+  width: 1.5rem;
+}
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.w-full {
+  width: 100%;
+}
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
+}
+.max-w-3xl {
+  max-width: 48rem;
+}
+.max-w-xl {
+  max-width: 36rem;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.grow {
+  flex-grow: 1;
+}
+.basis-1\/5 {
+  flex-basis: 20%;
+}
+.basis-1\/6 {
+  flex-basis: 16.666667%;
+}
+.basis-2\/5 {
+  flex-basis: 40%;
+}
+.basis-3\/5 {
+  flex-basis: 60%;
+}
+.basis-5\/6 {
+  flex-basis: 83.333333%;
+}
+@keyframes pulse {
+
+  50% {
+    opacity: .5;
+  }
+}
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.auto-cols-max {
+  grid-auto-columns: max-content;
+}
+.grid-flow-row {
+  grid-auto-flow: row;
+}
+.grid-flow-col {
+  grid-auto-flow: column;
+}
+.grid-flow-dense {
+  grid-auto-flow: dense;
+}
+.grid-flow-row-dense {
+  grid-auto-flow: row dense;
+}
+.auto-rows-auto {
+  grid-auto-rows: auto;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+.grid-rows-5 {
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.content-center {
+  align-content: center;
+}
+.content-between {
+  align-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-1 {
+  gap: 0.25rem;
+}
+.gap-16 {
+  gap: 4rem;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-24 {
+  gap: 6rem;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.gap-8 {
+  gap: 2rem;
+}
+.self-start {
+  align-self: flex-start;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-clip {
+  overflow: clip;
+}
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.rounded-2xl {
+  border-radius: 1rem;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+.border {
+  border-width: 1px;
+}
+.border-black\/0 {
+  border-color: rgb(0 0 0 / 0);
+}
+.border-base-100 {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b1) / var(--tw-border-opacity));
+}
+.bg-base-200 {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
+}
+.bg-base-300 {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
+}
+.bg-base-300\/75 {
+  background-color: hsl(var(--b3, var(--b2)) / 0.75);
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-black\/70 {
+  background-color: rgb(0 0 0 / 0.7);
+}
+.bg-error {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--er) / var(--tw-bg-opacity));
+}
+.bg-neutral {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+}
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+}
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--s) / var(--tw-bg-opacity));
+}
+.bg-sky-500\/0 {
+  background-color: rgb(14 165 233 / 0);
+}
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+.bg-warning {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--wa) / var(--tw-bg-opacity));
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+.from-success {
+  --tw-gradient-from: hsl(var(--su)) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(var(--su) / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-primary {
+  --tw-gradient-to: hsl(var(--p)) var(--tw-gradient-to-position);
+}
+.bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.fill-current {
+  fill: currentColor;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.p-4 {
+  padding: 1rem;
+}
+.p-8 {
+  padding: 2rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.pt-4 {
+  padding-top: 1rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-extrabold {
+  font-weight: 800;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.normal-case {
+  text-transform: none;
+}
+.text-base-100 {
+  --tw-text-opacity: 1;
+  color: hsl(var(--b1) / var(--tw-text-opacity));
+}
+.text-base-content {
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+}
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-error {
+  --tw-text-opacity: 1;
+  color: hsl(var(--er) / var(--tw-text-opacity));
+}
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: hsl(var(--s) / var(--tw-text-opacity));
+}
+.text-transparent {
+  color: transparent;
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+.text-\[\#\#ff4848\] {
+  color: ##ff4848;
+}
+.text-\[\#ff4848\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 72 72 / var(--tw-text-opacity));
+}
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-base-100 {
+  --tw-shadow-color: hsl(var(--b1));
+  --tw-shadow: var(--tw-shadow-colored);
+}
+.outline {
+  outline-style: solid;
+}
+.outline-1 {
+  outline-width: 1px;
+}
+.outline-2 {
+  outline-width: 2px;
+}
+.outline-4 {
+  outline-width: 4px;
+}
+.outline-base-100 {
+  outline-color: hsl(var(--b1));
+}
+.outline-\[\#ff4848\] {
+  outline-color: #ff4848;
+}
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+.hover\:bg-base-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
+}
+@media (min-width: 640px) {
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+
+  .lg\:w-3\/5 {
+    width: 60%;
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1280px) {
+
+  .xl\:grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1536px) {
+
+  .\32xl\:grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+}
+.\[\&\.card\]\:before\:opacity-70.card::before {
+  content: var(--tw-content);
+  opacity: 0.7;
+}</style><script src="hobnob_files/script.debug.js" defer="defer" data-sdkn="@vercel/analytics" data-sdkv="1.0.1"></script></head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><div class="pt-4 h-screen flex flex-col justify-between"><div class="flex flex-col justify-between flex-grow"><div class="flex flex flex-col gap-4 sm:flex-row justify-between items-center p-4"><a class="btn btn-ghost btn-sm normal-case text-xl font-poppins" href="http://localhost:5173/">hobnob</a> <form class="form-control"><div class="input-group"><label class="swap swap-rotate btn btn-square bg-gradient-to-br from-success to-primary btn-sm text-base-100 border border-gradient-to-br animate-pulse"><input type="checkbox" checked="checked"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 swap-on"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 swap-off"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"></path></svg></label> <input type="text" placeholder="Search artists" class="input input-bordered input-sm bg-sky-500/0"> <button class="btn btn-square btn-sm" type="submit"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button></div></form><!--<Searchform>--></div><!--<Nav>--> <div class="flex-grow"><div class="items-center justify-center flex flex-col gap-8 p-4"><div class="flex flex-col gap-8 w-full lg:w-3/5"><div class="flex gap-4 items-center"><div class="avatar"><div class="w-24 rounded-full"><img src="hobnob_files/city.png" alt="Berlin profile photo"></div></div> <div class="flex flex-col"><h1 class="text-4xl font-bold text-white">Berlin</h1> <p class="text-sm">City</p></div></div> <div class="flex flex-row justify-between"><label class="label cursor-pointer flex gap-2 self-start"><span class="label-text">Show Popular</span> <input type="checkbox" class="toggle toggle-sm" checked="checked"></label> </div></div> <div class="flex flex-col gap-2 h-full w-full lg:w-3/5 border"><div class="grid grid-flow-col auto-cols-max gap-4"><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1688422" target="_blank"><figure class="bg-white"><img src="hobnob_files/c0ebf25404b069024aa97373d2eb17ae0dd0c94d.jpg" alt="10Y R Label Group x HYTE – Berlin cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jul 08</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">10Y R Label Group x HYTE – Berlin</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">UFO im Velodrom, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1684258" target="_blank"><figure class="bg-white"><img src="hobnob_files/9843642bf2b134dbcf0776183548203eaff887c0.png" alt="Anjunadeep Open Air Berlin cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Anjunadeep Open Air Berlin</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Sage Beach Berlin, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1649611" target="_blank"><figure class="bg-white"><img src="hobnob_files/15c9b4c7d058fb9403ee3c2f6cabd5bbb79b4fef.png" alt="ICKPA 2023 cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 23</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">ICKPA 2023</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">RSO.BERLIN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1681854" target="_blank"><figure class="bg-white"><img src="hobnob_files/9a116d3b033ab8bf2dd715e911b9960024c0c8db.jpg" alt="EXHALE Berlin cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">EXHALE Berlin</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Anomalie Art Club, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1691215" target="_blank"><figure class="bg-white"><img src="hobnob_files/7dcf0271035040c9556c53508d5ef7a10c37518d.png" alt="Climate 24 hours: Helena Hauff, Objekt, Nick León cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Climate 24 hours: Helena Hauff, Objekt, Nick León</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Backsteinboot, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1627101" target="_blank"><figure class="bg-white"><img src="hobnob_files/43276f2264f65da00076c17ff81c05c2947acc58.jpg" alt="ANIMA: Summer Bloom  cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">ANIMA: Summer Bloom </p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Else, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1696044" target="_blank"><figure class="bg-white"><img src="hobnob_files/76586989e89f47d19a8cebae370234fa85d24ef2.png" alt="WHNZMMR Open Air Session cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">WHNZMMR Open Air Session</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Club OST, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1688738" target="_blank"><figure class="bg-white"><img src="hobnob_files/fcd70baba02c7ef7fadc0811d169ab1c7e16ef16.jpg" alt="JEY + KHAKII cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 20</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">JEY + KHAKII</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Hole44, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1702407" target="_blank"><figure class="bg-white"><img src="hobnob_files/eb46f43c5ab7fc3c9e857fb97c905980ba9ff748.jpg" alt="House of Lunacy - Solstice Ritual cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 22</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">House of Lunacy - Solstice Ritual</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Renate, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1453977" target="_blank"><figure class="bg-white"><img src="hobnob_files/ra-co-logo.jpeg" alt="[POSTPONED] Wave x Deus Temple Berlin cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jul 02</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">[POSTPONED] Wave x Deus Temple Berlin</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Deus Temple Berlin, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1618736" target="_blank"><figure class="bg-white"><img src="hobnob_files/7ea347e73eba377682dcfa13f1589a8b93f67e82.png" alt="Rave The Planet Parade 2023 - MUSIC IS THE ANSWER cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jul 08</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Rave The Planet Parade 2023 - MUSIC IS THE ANSWER</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">TBA - Berlin, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1684421" target="_blank"><figure class="bg-white"><img src="hobnob_files/4935512a579ffe2f709e395f58c9f51a2fac6248.png" alt="Anjunadeep Berlin  cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Anjunadeep Berlin </p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Watergate, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1641364" target="_blank"><figure class="bg-white"><img src="hobnob_files/eec3597d15849ed8abefe0706bd9a28dd6bbe3b4.jpg" alt="Four Play 7th Anniversary cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Four Play 7th Anniversary</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">KitKatClub, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1633708" target="_blank"><figure class="bg-white"><img src="hobnob_files/555fb6c8a8ec673691c50664faf221de2e52ad02.jpg" alt="ANIMA: Dancing Days cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jul 07</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">ANIMA: Dancing Days</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Else, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1708925" target="_blank"><figure class="bg-white"><img src="hobnob_files/c6490553e4c7109c5c74424e5e4c2eb09199f40b.jpg" alt="UFO RAVE Open Air with Ellen Allien, Alis., Deniro &amp; RUIZ OSC1 cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 11</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">UFO RAVE Open Air with Ellen Allien, Alis., Deniro &amp; RUIZ OSC1</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">RSO.BERLIN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1720781" target="_blank"><figure class="bg-white"><img src="hobnob_files/ra-co-logo.jpeg" alt="Darkart Nacht w/O.B.I., DAVE the Drummer, Deep State @ OST Berlin cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 24</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Darkart Nacht w/O.B.I., DAVE the Drummer, Deep State @ OST Berlin</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Club OST, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1702095" target="_blank"><figure class="bg-white"><img src="hobnob_files/0dda407b13400aa56bc6bce4b4e63ddd9e7e7322.jpg" alt="Devoted Open-Air &amp; Indoor /w Krl Mx, Kø:lab, Kamafaka, Punktmidi cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Devoted Open-Air &amp; Indoor /w Krl Mx, Kø:lab, Kamafaka, Punktmidi</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Suicide Club, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1709220" target="_blank"><figure class="bg-white"><img src="hobnob_files/f97807badd89ca0661cde2c0bfbf8b495131818e.png" alt="Music For Levant-Fundraising at Säälchen cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Music For Levant-Fundraising at Säälchen</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Säälchen, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1719207" target="_blank"><figure class="bg-white"><img src="hobnob_files/6aaa203051c2e160200d982292592c6b66043b16.png" alt="MCR-T &amp; Miss Bashful - Tootsie Pop Album Release Party cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 15</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">MCR-T &amp; Miss Bashful - Tootsie Pop Album Release Party</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">ÆDEN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1709136" target="_blank"><figure class="bg-white"><img src="hobnob_files/891856854dc0097994fc9cc38d4347ba3d332ddf.jpg" alt="Pornceptual - Day &amp; Night Open Air cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jul 01</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Pornceptual - Day &amp; Night Open Air</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Else, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1718691" target="_blank"><figure class="bg-white"><img src="hobnob_files/e8648843543b75de060ff8995024ab7f89c48870.jpg" alt="Dixon curates: DJ MELL G, Jimi Jules, DJ AYA, Suze Ijó and Dasha Atom cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jul 02</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Dixon curates: DJ MELL G, Jimi Jules, DJ AYA, Suze Ijó and Dasha Atom</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Else, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1642595" target="_blank"><figure class="bg-white"><img src="hobnob_files/d6abcc98885684114ee54a1c3d37b124c6b6e467.jpg" alt="Stützpunkt cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Stützpunkt</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">OXI, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1706913" target="_blank"><figure class="bg-white"><img src="hobnob_files/42c18cdb4b2b99359e814f982290ca3b36a1af0b.png" alt="KVETCH x BRENN. I WANT TO FEEL YOU cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">KVETCH x BRENN. I WANT TO FEEL YOU</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">ÆVE, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1689351" target="_blank"><figure class="bg-white"><img src="hobnob_files/5e3e04081aff11e1cf64bb125b884fd465b6489b.jpg" alt="ascendant vierge cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 14</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">ascendant vierge</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Berghain | Panorama Bar | Säule, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1711503" target="_blank"><figure class="bg-white"><img src="hobnob_files/ba957a86ab2d9906925188b349c1c99214c32101.png" alt="ATR PARTY - Open Air Edition cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">ATR PARTY - Open Air Edition</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Sage Beach Berlin, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1705500" target="_blank"><figure class="bg-white"><img src="hobnob_files/796ec07999c146b621d09f3512b24dec45c239cf.jpg" alt="KOMPOUND - Rebekah, 753, Cancel, LAVEN, Slave To Society... IV ANNIVERSARY            cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 23</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">KOMPOUND - Rebekah, 753, Cancel, LAVEN, Slave To Society... IV ANNIVERSARY           </p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Club OST, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1561882" target="_blank"><figure class="bg-white"><img src="hobnob_files/ad2082a82b6302c99ea6cdc2ec7fda1464ea6656.jpg" alt="Diffuse Reality pres. Sender Berlin [Tresor]  cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jul 06</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Diffuse Reality pres. Sender Berlin [Tresor] </p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">://about blank, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1695023" target="_blank"><figure class="bg-white"><img src="hobnob_files/22eeaf33d22eb23c28c64bb3d2b0b7b2ac29da77.jpg" alt="STAUB XXL cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">STAUB XXL</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">://about blank, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1709699" target="_blank"><figure class="bg-white"><img src="hobnob_files/ee2365d85014a70170c72c496bb03cede3f2ea7b.jpg" alt="TEKKNOZID Open Air &amp; Indoor Oldschool Rave - Start 5PM cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">TEKKNOZID Open Air &amp; Indoor Oldschool Rave - Start 5PM</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">RSO.BERLIN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1699926" target="_blank"><figure class="bg-white"><img src="hobnob_files/1f560c06c65383038c106910de8edc69a38be1d5.png" alt="Klubnacht cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Klubnacht</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Berghain | Panorama Bar | Säule, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1711842" target="_blank"><figure class="bg-white"><img src="hobnob_files/bd6cac0ffd9cab00c9ace582f778b8dc5abe5aee.jpg" alt="POWER PLAY: Peach, Rhyw, Konduku and many more cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">POWER PLAY: Peach, Rhyw, Konduku and many more</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">TBA - Secret Location, RSVP for details, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1710424" target="_blank"><figure class="bg-white"><img src="hobnob_files/ff63d54db0d7b3a4bbd9970102a1fb4be3c24241.jpg" alt="Funk Assault Take Over - Primal Instinct Release Party cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 18</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Funk Assault Take Over - Primal Instinct Release Party</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Watergate, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1690041" target="_blank"><figure class="bg-white"><img src="hobnob_files/112a87621c8dfb3f184f891a60997a76f60aff7f.jpg" alt="AWAY 10 YEARS presents Omar-S &amp; Move D cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 30</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">AWAY 10 YEARS presents Omar-S &amp; Move D</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">://about blank, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1689372" target="_blank"><figure class="bg-white"><img src="hobnob_files/d11c86c823642bb254a1744c0c7c379f8e7937f8.png" alt="Krake Festival Weekender cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 24</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Krake Festival Weekender</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">://about blank, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1673107" target="_blank"><figure class="bg-white"><img src="hobnob_files/8af29161ce9ae1a1d192d99a57e8c0bc56d7d520.png" alt="Subverted. ORGASMIC TEXTURES. Darkrooms and Performances cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Subverted. ORGASMIC TEXTURES. Darkrooms and Performances</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Club OST, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1708632" target="_blank"><figure class="bg-white"><img src="hobnob_files/bf4d6ea540313bf8436a1c786f7e5001481883e6.jpg" alt="KOFFÄIN Backyard Open Air with salute, Dan Shake, Hidden Spheres, Tour Maubourg, Marie Lung  cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">KOFFÄIN Backyard Open Air with salute, Dan Shake, Hidden Spheres, Tour Maubourg, Marie Lung </p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Prince Charles, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1709253" target="_blank"><figure class="bg-white"><img src="hobnob_files/a93645a0962d75f57f05141e0c944f7518a4cd18.jpg" alt="Body Language Summer Party (32 hour nonstop) cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Body Language Summer Party (32 hour nonstop)</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Köpenicker Strasse 18, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1697833" target="_blank"><figure class="bg-white"><img src="hobnob_files/6e4ab56a2a5f64cc7fcdd41313beb9ea1cc2f1b5.jpg" alt="MATTER: Daniel Avery, Peter Van Hoesen (Live), Neel b2b DJ Red, Mary Yuzovskaya, Cressida   cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">MATTER: Daniel Avery, Peter Van Hoesen (Live), Neel b2b DJ Red, Mary Yuzovskaya, Cressida  </p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Else, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1715701" target="_blank"><figure class="bg-white"><img src="hobnob_files/f1c9314bbb4ca943b8b578a821bc62733200e387.jpg" alt="Berlin Finest Anniversary - Open Air cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 23</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Berlin Finest Anniversary - Open Air</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Suicide Club, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1689905" target="_blank"><figure class="bg-white"><img src="hobnob_files/1ce25f03a19e01df3995665610170392ef61a02b.jpg" alt="PRU Y RVU : DAY OF BIRTH cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jul 01</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">PRU Y RVU : DAY OF BIRTH</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">OXI, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1719607" target="_blank"><figure class="bg-white"><img src="hobnob_files/78e75bdb5954cf6048c0adb107c47eeb567bc2b3.png" alt="Disco del Lago : Birthday Speziale cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 11</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Disco del Lago : Birthday Speziale</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Strandbad Plötzensee, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1715847" target="_blank"><figure class="bg-white"><img src="hobnob_files/80d1af718f07c4e81ccccfc8fb11dbd2101d4481.png" alt="FLOORGASM - 5YEAR BDAY BASH cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">FLOORGASM - 5YEAR BDAY BASH</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Trauma Bar und Kino, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1713918" target="_blank"><figure class="bg-white"><img src="hobnob_files/49f0b641274e76efac3e731ffff3c1af15f20902.jpg" alt="Deestricted: Sunday Breaker with Paul Seul, AISHA, SACID, San Regret, Jolly and vp&nbsp;allowed cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 18</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Deestricted: Sunday Breaker with Paul Seul, AISHA, SACID, San Regret, Jolly and vp&nbsp;allowed</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Köpenicker Strasse 18, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1713748" target="_blank"><figure class="bg-white"><img src="hobnob_files/a6b9da45e8ddec01139e47b521700e3340455bd9.jpg" alt="Else Open Air: Pan-Pot (extended set), angelboy, Ede, Moody Mehran cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 18</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Else Open Air: Pan-Pot (extended set), angelboy, Ede, Moody Mehran</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Else, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1646246" target="_blank"><figure class="bg-white"><img src="hobnob_files/855d6d1569ced5b8217e23fdd9fb4d2eafed2c66.jpg" alt="Stil vor Talent cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Stil vor Talent</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Ritter Butzke, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1703529" target="_blank"><figure class="bg-white"><img src="hobnob_files/aadb9449aa95348fa17f605e96927a9af7e40e1a.jpg" alt="Delirium² Day 'n' Night OPEN AIR w/ Carmen Electro, Justin Tinderdate, David Moleon cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 24</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Delirium² Day 'n' Night OPEN AIR w/ Carmen Electro, Justin Tinderdate, David Moleon</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">OXI, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1645999" target="_blank"><figure class="bg-white"><img src="hobnob_files/7937d88bb55da28d1617901a50130f995dbf6b38.png" alt="Golosa ...in Golosaland cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Golosa ...in Golosaland</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">://about blank, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1699928" target="_blank"><figure class="bg-white"><img src="hobnob_files/2be59e6e8460e6f75f01da49e964951dc6d036f0.png" alt="Klubnacht cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 24</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Klubnacht</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Berghain | Panorama Bar | Säule, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1640831" target="_blank"><figure class="bg-white"><img src="hobnob_files/9c0dd694465deac7bb86347429f0b06872081cff.jpg" alt="Expeditions cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 22</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Expeditions</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">://about blank, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1698217" target="_blank"><figure class="bg-white"><img src="hobnob_files/a9b88da9a604a182254fb87bbcacaf6b90d9ca99.jpg" alt="Hamam Nights cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 23</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Hamam Nights</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Berghain | Panorama Bar | Säule, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1702706" target="_blank"><figure class="bg-white"><img src="hobnob_files/ee5e043f522bd608df0755ffcb82d99915abae66.jpg" alt="47 with Tommy Four Seven, Stephanie Sykes, Flaminia &amp; VSK, Mystics cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 30</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">47 with Tommy Four Seven, Stephanie Sykes, Flaminia &amp; VSK, Mystics</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">RSO.BERLIN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1704520" target="_blank"><figure class="bg-white"><img src="hobnob_files/fd5fb5224e6d950869b04b0402f72e4cc2a0ffc5.jpg" alt="Selected XVIII with Julian Muller, CAIVA, JKS &amp; Frederic cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 28</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Selected XVIII with Julian Muller, CAIVA, JKS &amp; Frederic</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">RSO.BERLIN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1645891" target="_blank"><figure class="bg-white"><img src="hobnob_files/6e2992e86d538e5f6d6a6c011ab80cac7e0aec3a.jpg" alt="Dazed State X Bladehouse cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 15</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Dazed State X Bladehouse</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Renate, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1686476" target="_blank"><figure class="bg-white"><img src="hobnob_files/b096830f965d4ee49654ff679680af8d5a1b7a75.jpg" alt="Berlin's most wanted cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 24</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Berlin's most wanted</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Void Club, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1718138" target="_blank"><figure class="bg-white"><img src="hobnob_files/749d49f0977c8869e35603628261f31cea7c1d42.jpg" alt="ANOMALIE x EROTIC cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">ANOMALIE x EROTIC</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Anomalie Art Club, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1652587" target="_blank"><figure class="bg-white"><img src="hobnob_files/c85b0c7c56a7e322c7897bff6145de0c7a891022.jpg" alt="BODIES cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jul 01</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">BODIES</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">ÆDEN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1687121" target="_blank"><figure class="bg-white"><img src="hobnob_files/66e7998a198adb96aca2f0477d33ee19102e6b23.jpg" alt="Disconnekt Anniversary cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 23</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Disconnekt Anniversary</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">://about blank, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1706184" target="_blank"><figure class="bg-white"><img src="hobnob_files/cbea1d2ee161f6b9f197f0f0ebdebc7ecd5c43cf.jpg" alt="Else Open Air: Frank Wiedemann + Mathew Jonson (live), Chloé Caillet, Hardt Antoine, MIURA cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 11</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Else Open Air: Frank Wiedemann + Mathew Jonson (live), Chloé Caillet, Hardt Antoine, MIURA</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Else, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1709929" target="_blank"><figure class="bg-white"><img src="hobnob_files/658942f8f65cbc5d9ebdd876cfaa172cf9b8d0aa.png" alt="Bird House - Open Air 18H Rave // FREE ENTRY cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Bird House - Open Air 18H Rave // FREE ENTRY</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Baergarten at Revier Südost, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1705301" target="_blank"><figure class="bg-white"><img src="hobnob_files/7feae1cca1ef4d8342d658b5b80cd9cd27f0c081.jpg" alt="Dissident #11 - The Second Summer of Love ღ ꒰Garden party꒱ cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 11</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Dissident #11 - The Second Summer of Love ღ ꒰Garden party꒱</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">OXI, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1709140" target="_blank"><figure class="bg-white"><img src="hobnob_files/638f46dc6d751f59e806ae157293858c0070f1e1.jpg" alt="Raveletics cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 24</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Raveletics</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Suicide Club, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1706884" target="_blank"><figure class="bg-white"><img src="hobnob_files/fd5f42d9b4bbd466383c1b15e2b3ad055474548d.jpg" alt="A Tribe Called Kotori - The Psychedelic Garden [Open Air] cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 11</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">A Tribe Called Kotori - The Psychedelic Garden [Open Air]</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">gART.n, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1707568" target="_blank"><figure class="bg-white"><img src="hobnob_files/886d02f3c9b19f1e5a8ed95e28e051cf953683d9.jpg" alt="COURTOISY cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 30</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">COURTOISY</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Club OST, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1689111" target="_blank"><figure class="bg-white"><img src="hobnob_files/6340e6a53eaf272c192d218220aabb93123eaad8.jpg" alt="Sol Asylum cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 18</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Sol Asylum</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Heideglühen, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1710817" target="_blank"><figure class="bg-white"><img src="hobnob_files/8dba1bd44ad54e9dbb5cea84da293461cb62b828.jpg" alt="Unordnungsamt Therapy cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Unordnungsamt Therapy</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">TBA - Secret Location, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1715319" target="_blank"><figure class="bg-white"><img src="hobnob_files/31735367747f5a9dcc4d36a05c9f712cd06be22f.png" alt="VESELKA cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">VESELKA</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">RSO.BERLIN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1702971" target="_blank"><figure class="bg-white"><img src="hobnob_files/5812ed41423bdc0776868a7ddf56a4c257d66421.jpg" alt="Fenster LIVE + Lover Buffet LIVE / Day 2 cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 15</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Fenster LIVE + Lover Buffet LIVE / Day 2</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">arkaoda Berlin, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1719277" target="_blank"><figure class="bg-white"><img src="hobnob_files/808109f18d54fd712703b4198503979376d626c7.jpg" alt="MALA JUNTA - 5 Years anniversary cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">MALA JUNTA - 5 Years anniversary</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">ÆDEN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1713862" target="_blank"><figure class="bg-white"><img src="hobnob_files/02ab33fbb1b1afb6f90f787f2c3d36256490d77d.png" alt="Techno X Grossstadtkind Live Konzert cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Techno X Grossstadtkind Live Konzert</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">TBA - Bunte Kuh - Bernkasteler Str. 78, 13088 Berlin, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1699927" target="_blank"><figure class="bg-white"><img src="hobnob_files/a5803c45f4d8be79071ad59610407b0016508430.png" alt="Klubnacht cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Klubnacht</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Berghain | Panorama Bar | Säule, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1711275" target="_blank"><figure class="bg-white"><img src="hobnob_files/0df040a3286580a645e31b21546de297c7a6a674.png" alt="Re:mise: PULZAR x Aurōra with Aexhy, Cleopard2000, alemiko cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Re:mise: PULZAR x Aurōra with Aexhy, Cleopard2000, alemiko</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Köpenicker Strasse 18, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1711394" target="_blank"><figure class="bg-white"><img src="hobnob_files/17e06f71bae21048d0b706d80d01bdafb49e8163.jpg" alt="Fenster LIVE + Martha Rose LIVE / Day 1 cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 14</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Fenster LIVE + Martha Rose LIVE / Day 1</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">arkaoda Berlin, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1711246" target="_blank"><figure class="bg-white"><img src="hobnob_files/f22c8c6794834e2614195d9e52148f5eb05c9130.jpg" alt="PORZELLAN BAR - SATURDAY, I'M ON ACID WITH Bailey Ibbs, Glaskin, DJ SEX and more cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">PORZELLAN BAR - SATURDAY, I'M ON ACID WITH Bailey Ibbs, Glaskin, DJ SEX and more</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">ÆDEN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1714563" target="_blank"><figure class="bg-white"><img src="hobnob_files/0190b572164ba697c03d1ba91a780faaccc4fb3a.png" alt="Mitmischen cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Mitmischen</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">ÆDEN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1715405" target="_blank"><figure class="bg-white"><img src="hobnob_files/8ac275d7482e032b5e8334d1df5435c45e622bf6.jpg" alt="SURE UA cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">SURE UA</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Humboldthain Club, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1705176" target="_blank"><figure class="bg-white"><img src="hobnob_files/3fb687908adfccd3df55a3652a8845d2efd078c6.jpg" alt="echo [Hyper Berlin + club ai by myon rox] cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">echo [Hyper Berlin + club ai by myon rox]</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Acud Macht NEU, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1717494" target="_blank"><figure class="bg-white"><img src="hobnob_files/5a7855b8ea810187b7949a70702b9f596f1ea133.jpg" alt="SINGULARITY MONDAY RAVE cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 12</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">SINGULARITY MONDAY RAVE</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Köpenicker Strasse 18, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1684279" target="_blank"><figure class="bg-white"><img src="hobnob_files/ra-co-logo.jpeg" alt="LAYERS [garden/daytime] cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jul 01</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">LAYERS [garden/daytime]</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">OXI, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1705496" target="_blank"><figure class="bg-white"><img src="hobnob_files/c78a248e44820f760f7bd2cddb6c5aa0aa312f49.jpg" alt="ERRØR 3 YEARS Kling&amp;Klang with Dominique Lamee / SZG / SIKOTI / Kling&amp;Klang / ROJI &amp; MORE   cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">ERRØR 3 YEARS Kling&amp;Klang with Dominique Lamee / SZG / SIKOTI / Kling&amp;Klang / ROJI &amp; MORE  </p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">M-BIA, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1721006" target="_blank"><figure class="bg-white"><img src="hobnob_files/c50566bb758c21a117c90284ac4262e570c1fb42.jpg" alt="TEKKNOLOGIE SPEZIAL with HATRED / Crotekk / Kannadiss vs Fabitekk / Dreiachter / Cheapex cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 30</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">TEKKNOLOGIE SPEZIAL with HATRED / Crotekk / Kannadiss vs Fabitekk / Dreiachter / Cheapex</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">M-BIA, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1687347" target="_blank"><figure class="bg-white"><img src="hobnob_files/9b6e34ce151a8f77d682f0813d08b318b3993972.jpg" alt="8 Jahre Hase / 4 Tage wach / d.OHA!se cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 15</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">8 Jahre Hase / 4 Tage wach / d.OHA!se</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Der Weiße Hase, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1711005" target="_blank"><figure class="bg-white"><img src="hobnob_files/82c953e25aa931b70aaf7e68c9bf554b24661576.jpg" alt="Elysion x KTK cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 23</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Elysion x KTK</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">MUENZE, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1714129" target="_blank"><figure class="bg-white"><img src="hobnob_files/ra-co-logo.jpeg" alt="encore.une.fois / indoor rave + open air area cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 13</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">encore.une.fois / indoor rave + open air area</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">ÆDEN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1649639" target="_blank"><figure class="bg-white"><img src="hobnob_files/ef865f6bef409a64b5e336069d13473e6b24c123.png" alt="Azymuth - 50th Anniversary Tour// In Tribute to Ivan 'Mamão' Conti * live cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 20</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Azymuth - 50th Anniversary Tour// In Tribute to Ivan 'Mamão' Conti * live</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Gretchen, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1648423" target="_blank"><figure class="bg-white"><img src="hobnob_files/bd4f9875b24f6a735e8dd903c4c8162e46678f59.jpg" alt="Unter freiem Himmel // free entry all night long cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 21</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Unter freiem Himmel // free entry all night long</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Ritter Butzke, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1711161" target="_blank"><figure class="bg-white"><img src="hobnob_files/09c9b3f24a599bce1afa904973d1dd310e68bb30.png" alt="HYPERSOFT: Sunju Hargun, Bliss Inc., DJ TEETH, Remove-me, Richard Gregory + more cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">HYPERSOFT: Sunju Hargun, Bliss Inc., DJ TEETH, Remove-me, Richard Gregory + more</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Renate, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1705152" target="_blank"><figure class="bg-white"><img src="hobnob_files/b85aed5d969b3f076194fb82064b3b8066bd611d.jpg" alt="Toy Tonics presents ITALOMANIA cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 23</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Toy Tonics presents ITALOMANIA</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">ÆDEN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1713769" target="_blank"><figure class="bg-white"><img src="hobnob_files/aae9b5fa98789ac83ccb330a4ad875a7c057ee05.png" alt="Bombaclart Bass Dance Party Vol. 4 cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Bombaclart Bass Dance Party Vol. 4</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Christa Kupfer, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1687346" target="_blank"><figure class="bg-white"><img src="hobnob_files/c67dbdddf49f4069af4e5f2657f48122e42dcc65.jpg" alt="8 Jahre Hase / 4 Tage wach / Friday cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">8 Jahre Hase / 4 Tage wach / Friday</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Der Weiße Hase, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1698211" target="_blank"><figure class="bg-white"><img src="hobnob_files/a39d3a83d9a1f118af57e6577df74f5b15a03f2b.png" alt="SÄULE cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 22</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">SÄULE</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Berghain | Panorama Bar | Säule, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1688441" target="_blank"><figure class="bg-white"><img src="hobnob_files/659394316492d8a6119f823c7a7949e1f34d1a40.jpg" alt="Concrete Rave The Planet Afterparty cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jul 08</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Concrete Rave The Planet Afterparty</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">M01, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1687345" target="_blank"><figure class="bg-white"><img src="hobnob_files/f7d1cc91ab068d654781fd12e334c00805a8fb81.jpg" alt="8 Jahre Hase / 4 Tage wach / Saturday cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">8 Jahre Hase / 4 Tage wach / Saturday</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Der Weiße Hase, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1698220" target="_blank"><figure class="bg-white"><img src="hobnob_files/97bebf2d1b69592df12ce4200de3586d032b71b0.png" alt="YOUR LOVE cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 30</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">YOUR LOVE</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Berghain | Panorama Bar | Säule, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1687363" target="_blank"><figure class="bg-white"><img src="hobnob_files/b4365759859a9325d61c951d9be469b49daa8b05.jpg" alt="Smash Rave cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 13</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Smash Rave</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Der Weiße Hase, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1702962" target="_blank"><figure class="bg-white"><img src="hobnob_files/7d2181867fc36a1a2dae02143de40f85cb5a7ff8.jpg" alt="Birgits Weekender with Vazik, Maurice Mino, Gunnar Stiller, Dada Disco, Pierre Remy, uvm cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Birgits Weekender with Vazik, Maurice Mino, Gunnar Stiller, Dada Disco, Pierre Remy, uvm</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Birgit, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1712769" target="_blank"><figure class="bg-white"><img src="hobnob_files/14d5681059bb4bbd630c2a122eac81ed0ed6a640.jpg" alt="Tresor meets Surgeon cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">Tresor meets Surgeon</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Tresor / Globus, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1708071" target="_blank"><figure class="bg-white"><img src="hobnob_files/4f35a7ec19b74d0b811291839bdb03af88db7e22.jpg" alt="DYSTROPICO III Inherencia x .defaultbox x Tropikinky [Techno &amp; Perreo Queer Floor] cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 16</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">DYSTROPICO III Inherencia x .defaultbox x Tropikinky [Techno &amp; Perreo Queer Floor]</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Suicide Club, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1708941" target="_blank"><figure class="bg-white"><img src="hobnob_files/919692c538c0f79c163fd48c44e3d041d2db5a4c.jpg" alt="RFLXN with Dekmantel Soundsystem, Paula Koski b2b Jeroen Search, P.E.A.R.L b2b Not A Headliner cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 17</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">RFLXN with Dekmantel Soundsystem, Paula Koski b2b Jeroen Search, P.E.A.R.L b2b Not A Headliner</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">RSO.BERLIN, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1684207" target="_blank"><figure class="bg-white"><img src="hobnob_files/23416e080aa8ddd8b4a1d56e7deaaa2b02f974d8.jpg" alt="NEER Groove-Poetry cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 23</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">NEER Groove-Poetry</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Void Club, Unknown</p></div></div> </a><a class="card card-compact image-full w-48 max-w-3xl h-72 bg-primary shadow-xl [&amp;.card]:before:opacity-70 outline outline-base-100" href="https://ra.co/events/1714925" target="_blank"><figure class="bg-white"><img src="hobnob_files/c7f72e4928fa05e0574acb8a5a454cd6d1ca05c9.jpg" alt="TRI:CEPTION (Psytrance, Techno, House) - 3 floors cover image" class="bg-white"></figure> <div class="card-body h-full flex flex-col justify-between"><div class="text-white text-sm font-medium bg-black/70 rounded px-2 w-fit text-[#ff4848]"><p>Jun 10</p></div> <div class="flex flex-col"><p class="text-white text-lg font-bold text-ellipsis overflow-hidden line-clamp-3">TRI:CEPTION (Psytrance, Techno, House) - 3 floors</p> <p class="text-sm text-white text-ellipsis overflow-hidden line-clamp-1">Void Club, Unknown</p></div></div> </a></div></div><!--<Events>--> </div><!--<City>--><!--<+page>--></div></div> <footer class="footer footer-center p-4 bg-base-200 text-base-content mt-8"><div><a href="https://github.com/moreSalt/hobnob-client" target="_blank" class="link">Github</a></div></footer></div><!--<+layout>--> <div id="svelte-announcer" aria-live="assertive" aria-atomic="true" style="position: absolute; left: 0px; top: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px;">hobnob</div><!--<Root>--></div>
+	
+
+</body></html>

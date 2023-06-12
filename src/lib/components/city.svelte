@@ -5,7 +5,7 @@
     import { page } from '$app/stores'
     import { goto, invalidateAll } from '$app/navigation';
     $: p = $page.url.searchParams.get('page') || "0"
-    $: s = $page.url.searchParams.get('source') || "default"
+    $: s = $page.url.searchParams.get('s') || "default"
     export let res: CityResponse;
     $: popular = p == "0"
 
@@ -13,13 +13,13 @@
         p = `${change == 0 ? 0 : parseInt(p) + change}`
         let query = new URLSearchParams()
         query.set('page', p);
-        query.set('source', s);
+        query.set('s', s);
         goto(`?${query.toString()}`)    
     }
 </script>
 
 <div class=" items-center justify-center flex flex-col gap-8 p-4">
-    <div class="flex flex-col gap-8 w-full lg:w-3/5">
+    <div class="flex flex-col gap-4 w-full lg:w-3/5 lg:max-w-7xl">
         <div class="flex gap-4 items-center">
             <div class="avatar">
                 <div class="w-24 rounded-full">
@@ -30,13 +30,12 @@
                 </div>
             </div>
             <div class="flex flex-col">
-                <h1 class="text-4xl font-bold text-white">{res.city}</h1>
+                <h1 class="text-4xl font-bold text-white" class:text-red-500={s === "ra"}>{res.city}</h1>
                 <p class="text-sm">City</p>
             </div>
         </div>
 
 
-        <!-- {#if (res.events.length > 0 && res.events[0].source != 'ra')} -->
         <div class="flex flex-row justify-between">
             <label class="label cursor-pointer flex gap-2 self-start">
                 <span class="label-text">Show Popular</span>
@@ -44,7 +43,7 @@
                     p =  popular ? "1" : "0"
                     let query = new URLSearchParams()
                     query.set('page', p);
-                    query.set('source', s);
+                    query.set('s', s);
                     goto(`?${query.toString()}`)        
                 }}/>
             </label>
@@ -57,14 +56,13 @@
                     p = `${parseInt(p) + 1}`
                     let query = new URLSearchParams()
                     query.set('page', p);
-                    query.set('source', s)
+                    query.set('s', s)
                     goto(`?${query.toString()}`);
 
                 }}>»</button>
               </div>
             {/if}
         </div>
-        <!-- {/if} -->
     </div>
 
     <Events res={res.events} />

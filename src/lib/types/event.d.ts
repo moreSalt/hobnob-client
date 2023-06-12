@@ -5,4 +5,5 @@ export interface ResponseEvents {
     city: string
     date: string
     source: string
+    image: string
   }

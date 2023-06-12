@@ -30,7 +30,9 @@ export default {
                     error: "#FB7085",
                 },
             },
+            "light",
+            "dark"
         ],
     },
-    plugins: [require("daisyui")],
+    plugins: [require("daisyui"), require('@tailwindcss/line-clamp')],
 };
