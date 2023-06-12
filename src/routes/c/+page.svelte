@@ -25,7 +25,7 @@
       }}/>
     </label>
 </div>
-<SearchCities items={data.cities} q={data.q}/>
+<SearchCities items={data.cities}/>
 
 {:else}
     <div class="w-full h-full justify-center flex flex-col items-center gap-4">

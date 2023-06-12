@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { CitiesResponse } from "$lib/types/cities";
     export let items: CitiesResponse[] = [];
-    export let q: string = "";
+    // export let q: string = "";
 </script>
 
     <div class=" items-center justify-center flex flex-col">

@@ -29,6 +29,7 @@
                                 class="w-42 rounded-full shadow shadow-2xl shadow-base-300"
                             >
                                 <img
+                                    class="bg-base-300"
                                     src={item.image}
                                     alt="{item.name} profile picture"
                                 />
@@ -42,7 +43,7 @@
                                 {item.name}
                             </h3>
                             <p class="">
-                                {item.genre === "Unknown" || item.genre === "unknown" ? " " : item.genre }
+                                {item.genre}
                             </p>
                         </div>
                     </div>
