@@ -34,5 +34,5 @@ export default {
             "dark"
         ],
     },
-    plugins: [require("daisyui"), require('@tailwindcss/line-clamp')],
+    plugins: [require("daisyui")],
 };

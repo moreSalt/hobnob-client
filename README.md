@@ -16,5 +16,6 @@ Easy way to search for events from artists or in cities
 - [ ] Better font
 - [x] Ticketmaster Evvy do not remove search params
 - [x] Add in ra.co results? Need a way for source 1 and ra.co to translate well
-- [ ] RA ARtist lambda change date
-- [ ] RA results popular and pages
+- [x] RA ARtist lambda change date
+- [x] RA results popular and pages
+- [ ] Search for RA cities not working when spaces are added

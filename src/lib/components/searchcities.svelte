@@ -23,16 +23,15 @@
 
                 "
                 >
-                    <div class="card-body flex flex-col items-center gap-8">
+                <div class="card-body flex flex-row justify-between items-center gap-8">
 
-                        <div class="w-full">
-                            <h3
-                                class="font-bold text-white whitespace-nowrap text-ellipsis overflow-hidden"
-                            >
-                                {item.name}
-                            </h3>
-                        </div>
-                    </div>
+                    <h3
+                        class="font-bold text-white whitespace-nowrap text-ellipsis overflow-hidden"
+                    >
+                        {item.name}
+                    </h3>
+                    <div class="bg-white h-4 w-4 rounded-full" class:bg-error={item.source === "ra"}></div>
+                </div>
                 </a>
             {/each}
         </div>

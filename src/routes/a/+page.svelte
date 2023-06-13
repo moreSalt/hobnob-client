@@ -24,7 +24,7 @@
 {#if data?.q}
 <div class="form-control w-full items-center">
     <label class="label cursor-pointer flex justify-start gap-2 items-center content-center w-3/5 max-w-7xl">
-      <span class="label-text">residential advisor</span> 
+      <span class="label-text">resident advisor</span> 
       <input type="checkbox" class="toggle toggle-error toggle-sm" {disabled} bind:checked={raSource} on:click={() => {
         disabled = true
         let q = $page.url.searchParams.get('q') || ""
