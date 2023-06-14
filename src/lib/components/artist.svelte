@@ -21,7 +21,7 @@
                 </div>
               </div>
               <div class="flex flex-col">
-                <h1 class="text-4xl font-bold text-white" class:text-red-500={source === "ra"}>{res.name}</h1>
+                <h1 class="text-4xl font-bold text-error" class:text-white={source !== "ra"}>{res.name}</h1>
                 <p class="text-sm">Artist</p>
             </div>
         </div>

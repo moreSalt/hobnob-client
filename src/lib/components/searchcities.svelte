@@ -1,7 +1,6 @@
 <script lang="ts">
     import type { CitiesResponse } from "$lib/types/cities";
     export let items: CitiesResponse[] = [];
-    // export let q: string = "";
 </script>
 
     <div class=" items-center justify-center flex flex-col">
@@ -30,7 +29,7 @@
                     >
                         {item.name}
                     </h3>
-                    <div class="bg-white h-4 w-4 rounded-full" class:bg-error={item.source === "ra"}></div>
+                    <div class="bg-error h-4 w-4 rounded-full" class:bg-white={item.source !== "ra"}></div>
                 </div>
                 </a>
             {/each}
