@@ -56,7 +56,6 @@ export async function Lambda(
             return body;
         } else if (method == "cities") {
             const body: CitiesResponse[] = await res.json();
-            await console.log(body)
             return body;
         } else {
             await console.log("WHAT IS THIS BS");

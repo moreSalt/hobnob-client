@@ -1,7 +1,8 @@
 <script lang="ts">
     // import { page } from '$app/stores'
     import { goto } from '$app/navigation';
-    export let artistSelected = true;
+    // export let artistSelected = true;
+    export let selectedQuery = "artists"
     $: searchQuery = ""
 
     async function go() {
@@ -9,7 +10,7 @@
         let query = new URLSearchParams()
         await query.set('q', q);
         await query.set('s', "default");
-        window.location.href = `/${artistSelected ? "a" : "c" }?${query.toString()}`
+        window.location.href = `/${selectedQuery === "artists" ? "a" : "c" }?${query.toString()}`
     }
     
 </script>
@@ -17,14 +18,12 @@
     <form class="form-control group"  on:submit={go}>
     <div class="join outline outline-1 outline-base-300">
 
-        <input bind:value={searchQuery}  placeholder={artistSelected ? "Search artists" :  "Search cities"} class=" input join-item  border-0 focus:outline-0 group-focus:text-green-500 group-focus:outline group-focus:outline-pink-500"  />
+        <input bind:value={searchQuery}  placeholder="Search..." class=" input join-item  border-0 focus:outline-0 group-focus:text-green-500 group-focus:outline group-focus:outline-pink-500"  />
 
-
+<!-- 
         <label class="swap swap-rotate join-item btn btn-square bg-base-100 animate-pulse">
-            <!-- this hidden checkbox controls the state -->
             <input type="checkbox" bind:checked={artistSelected}/>
 
-            <!-- User icon -->
             <svg
                 class="swap-on fill-current w-5 h-5 fill-white/60"
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,11 +31,9 @@
             >
             <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
 
-                <!-- <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/> -->
             </svg>
 
               
-            <!-- City icon -->
             <svg
                 class="swap-off fill-current w-5 h-5 fill-white/60"
                 xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +47,12 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
               </svg>
               
-        </label>
+        </label> -->
+
+        <select name="" id="searchtype" class="select join-item focus:outline-0" bind:value={selectedQuery} >
+            <option value="artists">artists</option>
+            <option value="cities">cities</option>
+        </select>
 
 
         <button class="btn btn-square join-item bg-base-300">

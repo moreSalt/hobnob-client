@@ -1,4 +1,5 @@
 import { Lambda } from "$lib/functions/lambda";
+import type { CitiesResponse } from "$lib/types/cities.d";
 /** @type {import('./$types').PageServerLoad} */
 export const load = async ({ url }) => {
     try {
@@ -13,6 +14,32 @@ export const load = async ({ url }) => {
             await console.log("Bad res");
             return;
         }
+
+
+        // Change to one "page" showing both ra and default sources, need to figure out better ui and also a best match algo
+        // const res1 = await Lambda("cities", q, 0, "ra");
+        // if (res == null) {
+        //     await console.log("Bad res");
+        //     return;
+        // }
+
+        // const events: CitiesResponse[] = []
+        // // @ts-ignore
+        // const biggerLength = res.length > res1.length ? res.length : res1.length
+        // for (let i = 0; i < biggerLength; i++) {
+        //     // @ts-ignore
+        //     if (i < res.length) {
+        //                        // @ts-ignore
+        //                        events.push(res[i])
+        //     }
+
+        //     // @ts-ignore
+        //     if (i < res1.length) {
+        //         // @ts-ignore
+        //         events.push(res1[i])
+        //     }
+
+        // }
 
         return {
             // @ts-ignore

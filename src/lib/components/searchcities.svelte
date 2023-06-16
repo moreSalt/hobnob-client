@@ -15,7 +15,7 @@
                     rounded-lg
                     min-w-96
                     shadow-2xl
-                    bg-base-300/75
+                    bg-base-300
                     hover:cursor-pointer
                     hover:bg-base-300
                     group
@@ -25,7 +25,7 @@
                 <div class="card-body flex flex-row justify-between items-center gap-8">
 
                     <h3
-                        class="font-bold text-white whitespace-nowrap text-ellipsis overflow-hidden"
+                        class="font-bold text-error whitespace-nowrap text-ellipsis overflow-hidden" class:text-white={item.source !== "ra"}
                     >
                         {item.name}
                     </h3>
